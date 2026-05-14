@@ -174,8 +174,50 @@ export default function App() {
               since 2008 · 해피동물병원
             </div>
             <h1 className="text-3xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.2] tracking-tighter mb-5">
-              사랑하는 반려동물,<br />
-              <span className="text-[#D4A373]">건강한 하루</span>를 선물하세요.
+              <span className="block overflow-hidden pb-1">
+                {["사랑하는", "반려동물,"].map((word, i) => (
+                  <motion.span
+                    key={i}
+                    animate={{ 
+                      opacity: [0, 1, 1, 0],
+                      y: [40, 0, 0, -40],
+                      rotateX: [15, 0, 0, -15]
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      times: [0, 0.15, 0.85, 1],
+                      delay: i * 0.1,
+                      ease: [0.33, 1, 0.68, 1]
+                    }}
+                    className="inline-block mr-[0.2em]"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </span>
+              <span className="block overflow-hidden">
+                {["건강한", "하루를", "선물하세요."].map((word, i) => (
+                  <motion.span
+                    key={i}
+                    animate={{ 
+                      opacity: [0, 1, 1, 0],
+                      y: [40, 0, 0, -40],
+                      rotateX: [15, 0, 0, -15]
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      times: [0, 0.15, 0.85, 1],
+                      delay: (i + 2) * 0.1,
+                      ease: [0.33, 1, 0.68, 1]
+                    }}
+                    className={`inline-block mr-[0.2em] ${i < 2 ? 'text-[#D4A373]' : ''}`}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </span>
             </h1>
             <p className="text-white/70 max-w-md text-base sm:text-lg leading-relaxed mb-9">
               15년 이상의 임상 경험을 갖춘 전담 수의사가<br />
