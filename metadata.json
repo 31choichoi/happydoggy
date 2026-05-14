@@ -1,0 +1,8 @@
+{
+  "name": "해피동물병원",
+  "description": "반려동물의 건강한 하루를 위해 15년 이상 함께해온 프리미엄 동물병원 홈페이지입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

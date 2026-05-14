@@ -1,0 +1,28 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard", -apple-system, system-ui, sans-serif;
+  
+  --color-primary: #4A3728;
+  --color-primary-dark: #33261C;
+  --color-primary-light: #F5F1EE;
+  --color-accent: #D4A373;
+  --color-bg-warm: #F2EBE3;
+  --color-bg-dark: #2D241E;
+  --color-bg-brown: #3E322A;
+  --color-text-mid: #5C524B;
+  --color-text-light: #9E938A;
+  --color-border-custom: #E8E2DD;
+
+  --radius-lg-custom: 20px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#FAFAF8] text-[#1A2620] leading-relaxed overflow-x-hidden;
+  }
+}
